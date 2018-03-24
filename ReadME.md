@@ -6,9 +6,9 @@ Please feel free to contact me at [noamyair10.tc@gmail.com](noamyair10.tc@gmail.
 Noam Yair.
 
 
-# Running the Code and Reproducing Results
+# Running the Code
 - **A Simple Example**
-  * For a simple example of a deblurring case just run the 'RunMe.m' file.
+For a simple example of a deblurring case just run the 'RunMe.m' file.
 
 - **Reproducing Paper Experiments**<br />
 For reproducing the experiments from the paper use the 'ReproduceExperiments.m' file and follow the instruction in the documentation. You may also just run this funtion as-is for a simple example.
@@ -23,7 +23,7 @@ You may also run 'RunAlgorithm' function / file. Though, this function expect so
 # Citation
 ```
  @inproceedings{MSWNNM,
-   title={Multi-ScaleWeighted Nuclear Norm Image Restoration},
+   title={Multi-Scale Weighted Nuclear Norm Image Restoration},
    author={Yair, Noam and Michaeli, Tomer},
    booktitle={IEEE Conference on Computer Vision and Pattern Recognition},
    year={2018},
