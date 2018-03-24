@@ -19,7 +19,6 @@ switch(initType)
     case(3)
         % Initialization Using IRCNN
         fprintf('\nInitializing using IRCNN:\n');
-        addpath(genpath('IRCNN')); % Add IRCNN folders to path
         vl_compilenn();
         sAlgParam = RunIRCNN(y, noiseStd, H, algorithmPurpose, sAlgParam, mOrgImg);
         fprintf('Initialization Completed.\n');

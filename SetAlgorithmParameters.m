@@ -36,14 +36,13 @@ elseif strcmp(algorithmPurpose,'deblurring')
     sAlgParam.downScaleFactor   = [1, 0.75]; % use [1] for no multiscale or [1, x, y...] for several scales
     sAlgParam.numItersHQS       = 5;
 elseif strcmp(algorithmPurpose,'inpainting')
-    if ~isnan(sSimParam.missingDataRatio)
-        if sSimParam.missingDataRatio <= 25
-            sAlgParam.numItersMain  = 200;
-        elseif sSimParam.missingDataRatio <= 50
-            sAlgParam.numItersMain  = 300;
-        else
-            sAlgParam.numItersMain  = 400;
-        end
+    missingDataRatio = mean(~H(:));
+    if missingDataRatio <= 0.3
+        sAlgParam.numItersMain  = 200;
+    elseif missingDataRatio <= 0.55
+        sAlgParam.numItersMain  = 300;
+    else
+        sAlgParam.numItersMain  = 400;
     end
     sAlgParam.mu1               = 5e-3;     % Initial value
     sAlgParam.mu2               = 5e-4;     % Initial value

@@ -8,7 +8,7 @@ function [ sSimData ] = RunMe( )
 % 
 % This function simulates the restoration algorithm, as it:
 % - Create a corrupted image.
-% - Run the algorithm to restore the corrupted image.
+% - Run the restoration algorithm on the corrupted image.
 % - Display results.
 % 
 % At the end of the simulation:
@@ -23,6 +23,9 @@ function [ sSimData ] = RunMe( )
 % Please feel free to contact me at noamyair10.tc@gmail.com.
 % --------------------------------------------------------------------------------
 
+% Add all subfolders to path
+addpath(genpath(pwd));
+
 % Set Simulation Parameters (noise level, blur-kernel / mask etc.)
 sSimParam = SetSimulationParams();
 
@@ -30,7 +33,7 @@ sSimParam = SetSimulationParams();
 sSimParam = GetOriginalAndCorruptedImages(sSimParam);
 
 % Run Restoration Algorithm
-fprintf(TextToDisp(sSimParam));
+fprintf(GetTextToDisp(sSimParam));
 sAlgParam = RunAlgorithm(sSimParam.mCorruptedImage, sSimParam.noiseStd,...
     sSimParam.H, sSimParam.algorithmPurpose, [], sSimParam.mOrgImg);
 
@@ -86,8 +89,8 @@ else
 end
 
 % Fix Random Seed
-randn('seed', 0);   % Fix noise random seed 
-rand('seed', 0);    % Fix inpainting mask random seed
+randn('seed', 0);   % Fix random seed for generated noise
+rand('seed', 0);    % Fix random seed for inpainting mask
 
 % Choose image-resize factor (in case you want to get results faster, work on a smaller image...)
 sSimParam.imageResizeFacor = 1; % Choose '1' to use original size image
@@ -136,7 +139,7 @@ sSimParam.mCorruptedImage = mCorruptedImage;
 end
 
 
-function [ txtStr ] = TextToDisp( sSimParam )
+function [ txtStr ] = GetTextToDisp( sSimParam )
 
 algorithmPurpose = sSimParam.algorithmPurpose;
 noiseStdStr = num2str(sSimParam.noiseStd);
