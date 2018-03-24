@@ -33,7 +33,7 @@ You may also run 'RunAlgorithm' function / file. Though, this function expect so
 # Some Visual Comparison Examples (from the paper)
 Our algorithm handles arbitrary degradations within a single simple framework. It relies on a novel regularization term which encourages similar patches within and [across scales](https://youtu.be/YKULDPyrKZs) of the image to lie on low-dimensional subspaces. This leads to state-of-the-art results in tasks like inpainting and deblurring.<br />
 
-- ** Example 1: Inpainting with 75\% missing pixels on Images from the [NCSR Set](http://www4.comp.polyu.edu.hk/~cslzhang/NCSR.htm)**<br />
+- **Example 1: Inpainting with 75\% missing pixels on Images from the [NCSR Set](http://www4.comp.polyu.edu.hk/~cslzhang/NCSR.htm)**<br />
 Our algorithm produces a naturally looking reconstruction with sharp edges and no distracting artifacts. This is also supported by the high PSNR values it attains w.r.t. competing approaches.<br />
 
 **Image Butterfly**<br />
@@ -46,7 +46,7 @@ Our algorithm produces a naturally looking reconstruction with sharp edges and n
 <img src="/Misc/ResultsExamples/5_InpaintingStarfish.png" width="1000">
 </p>
 
-- ** Example 2: Deblurring on Images from the [BSD100 Set](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/)**<br />
+- **Example 2: Deblurring on Images from the [BSD100 Set](https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/)**<br />
 On each example, a degraded input image from the BSD dataset is shown on the top left. It suffers from Gaussian blur with standard deviation 1.6 and additive noise with STD 2. As can be seen, while all state-of-the-art deblurring methods produce artifacts in the reconstruction, our algorithm produces sharp results without annoying distortions. Its precision is also confirmed by the very high PSNR it attaines w.r.t. the other methods.<br />
 
 **Image 86000**<br />
