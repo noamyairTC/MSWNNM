@@ -228,7 +228,7 @@ switch experimentType
     otherwise
         % Run some simple deblurring example ('Lena' image with Gauss Blur and Noise STD 2)
         sAlgParam.algorithmPurpose  = 'deblurring';
-        sAlgParam.numItersMain      = 2;
+        sAlgParam.numItersMain      = 5;
         sAlgParam.initType          = 3; % Using IRCNN initialization
         sSimParam.kernelName        = 'Gaussian';
         sSimParam.H                 = fspecial(sSimParam.kernelName, 25, 1.6);

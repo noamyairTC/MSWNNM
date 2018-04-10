@@ -1,28 +1,28 @@
-# [Multi-Scale Weighted Nuclear Norm Image Restoration](https://tomer.net.technion.ac.il/files/2018/03/MultiScaleWNNM_CVPR18.pdf)
+# [Multi-Scale Weighted Nuclear Norm Image Restoration](https://tomer.net.technion.ac.il/files/2018/04/MS-WNNM-IR.pdf)
 
-The code available here is an implementation of the "Multi-Scale Weighted Nuclear Norm Image Restoration" [paper](https://tomer.net.technion.ac.il/files/2018/03/MultiScaleWNNM_CVPR18.pdf), Conference on Computer Vision and Pattern Recognition ([CVPR 2018](http://cvpr2018.thecvf.com)).
+The code available here is an implementation of the "Multi-Scale Weighted Nuclear Norm Image Restoration" [paper](https://tomer.net.technion.ac.il/files/2018/04/MS-WNNM-IR.pdf), Conference on Computer Vision and Pattern Recognition ([CVPR 2018](http://cvpr2018.thecvf.com)).
 
-Please feel free to contact me at [noamyair10.tc@gmail.com](noamyair10.tc@gmail.com).<br />
+Feel free to contact me at [noamyair10.tc@gmail.com](noamyair10.tc@gmail.com).<br />
 Noam Yair.
 
 
 # Running the Code
 - **A Simple Example**<br />
-For a simple example of a deblurring case just run the 'RunMe.m' file.
+For a single image deblurring example run the 'RunMe.m' file.
 
 - **Reproducing Paper Experiments**<br />
-For reproducing the experiments from the paper use the 'ReproduceExperiments.m' file and follow the instruction in the documentation. You may also just run this funtion as-is for a simple example.
+For reproducing paper experiments use the 'ReproduceExperiments.m' file and follow the instruction in the documentation. You may also run this funtion as-is for a simple example.
 
 - **Additional Option**<br />
-You may also run 'RunAlgorithm' function / file. Though, this function expect some inputs (the corrupted image, the noise level, etc.). Follow the documentation of this function to use it directly. Note: the purpose of the 'RunMe.m' function is to create the appropriate inputs for the 'RunAlgorithm' function and then call it. Therefore, you may found using the 'RunMe.m' function more convenient.
+Additional option of running the algorithm is by using the 'RunAlgorithm' function / file, though this function expect some inputs (the corrupted image, the noise level, etc.). Follow the documentation of this function to use it directly. Note: the purpose of the 'RunMe.m' function is to create the appropriate inputs for the 'RunAlgorithm' function and then call it. Therefore, you may find using the 'RunMe.m' function more convenient.
 
 # Requirements and Dependencies
 - Matlab with an Image Processing Toolbox.
-- If using the IRCNN method for initialization, please see [IRCNN method page](https://github.com/cszn/IRCNN) (will require [MatConvNet](http://www.vlfeat.org/matconvnet/)).
+- When using the IRCNN method for initialization, please see [IRCNN method page](https://github.com/cszn/IRCNN) (will require [MatConvNet](http://www.vlfeat.org/matconvnet/)).
 
 # Citation
 ```
- @inproceedings{MSWNNM,
+ @inproceedings{MS_WNNM_IR,
    title={Multi-Scale Weighted Nuclear Norm Image Restoration},
    author={Yair, Noam and Michaeli, Tomer},
    booktitle={IEEE Conference on Computer Vision and Pattern Recognition},
@@ -31,10 +31,10 @@ You may also run 'RunAlgorithm' function / file. Though, this function expect so
  ```
 
 # Some Visual Comparison Examples (from the paper)
-Our algorithm handles arbitrary degradations within a single simple framework. It relies on a novel regularization term which encourages similar patches within and [across scales](https://youtu.be/YKULDPyrKZs) of the image to lie on low-dimensional subspaces. This leads to state-of-the-art results in tasks like inpainting and deblurring.<br />
+Our algorithm handles arbitrary degradations within a single simple framework. It relies on a novel regularization term which encourages similar patches within and [across](https://youtu.be/YKULDPyrKZs) scales of the image to lie on low-dimensional subspaces. This leads to state-of-the-art results in tasks like inpainting and deblurring.<br />
 
 - **Example 1: Inpainting with 75\% missing pixels on Images from the [NCSR Set](http://www4.comp.polyu.edu.hk/~cslzhang/NCSR.htm)**<br />
-Our algorithm produces a naturally looking reconstruction with sharp edges and no distracting artifacts. This is also supported by the high PSNR values it attains w.r.t. competing approaches.<br />
+Note, in the following examples, how our algorithm produces a naturally looking reconstruction with sharp edges and no distracting artifacts. This is also supported by the high PSNR values it attains w.r.t. competing approaches.<br />
 
 **Image Butterfly**<br />
 <p align="center">
@@ -63,3 +63,5 @@ On each example, a degraded input image from the BSD dataset is shown on the top
 <p align="center">
 <img src="/Misc/ResultsExamples/4_Deblurring210088.png" width="500">
 </p>
+
+For more details, please refer to the paper.
