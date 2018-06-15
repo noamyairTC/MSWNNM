@@ -56,7 +56,7 @@ On each example, a degraded input image from the BSD dataset is shown on the top
 
 - **Animated Comparison**<br />
 <p align="center">
-<img src="/Misc/ResultsExamples/comparasion.gif" width="800">
+<img src="/Misc/ResultsExamples/comparasion_zoom.gif" width="800">
 </p>
 
 For more details please refer to the paper.
